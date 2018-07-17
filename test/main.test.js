@@ -30,8 +30,8 @@ describe('#initial tests', function() {
     assert.isObject(user);
     assert.isString(user.name);
     assert.typeOf(user.age, 'number');
+    assert.isFunction(sayHello);
 
-    // sayHello().should.be.a('function');
     user.should.be.a('object');
     user.age.should.not.equal(22);
   });
