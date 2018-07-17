@@ -58,7 +58,6 @@ describe('add()', function() {
 
 describe('#hooks', function() {
   var user = 'Aaron';
-  this.retries(4);
   beforeEach(function(done) {
     setTimeout(function() {
       user = 'Prinkle';
@@ -77,6 +76,7 @@ describe('#hooks', function() {
 });
 
 describe('#asynchronous testing', function() {
+  this.retries(2);
   this.timeout(10000); //default timeout is 2000 ms
 
   it('should test callbacks', function(done) {
