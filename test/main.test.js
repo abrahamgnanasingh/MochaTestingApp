@@ -58,6 +58,14 @@ describe('add()', function() {
   });
 });
 
+describe('#prototype/object testing', function() {
+  it('should test changes made', function() {
+    var person1 = createPerson('Aaron', 'Davies', 23);
+    assert.equal(person1.getFullName(), 'Aaron Davies');
+    assert.equal(person1.getAge(), 23);
+  });
+});
+
 describe('#hooks', function() {
   var user = 'Aaron';
   beforeEach(function(done) {
@@ -100,13 +108,5 @@ describe('#asynchronous testing', function() {
       expect(result.date).to.be.a('string');
       done();
     });
-  });
-});
-
-describe('#prototype/object testing', function() {
-  it('should test changes made', function() {
-    var person1 = createPerson('Aaron', 'Davies', 23);
-    assert.equal(person1.getFullName(), 'Aaron Davies');
-    assert.equal(person1.getAge(), 23);
   });
 });
