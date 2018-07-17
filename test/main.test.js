@@ -58,6 +58,7 @@ describe('add()', function() {
 
 describe('#hooks', function() {
   var user = 'Aaron';
+  this.retries(4);
   beforeEach(function(done) {
     setTimeout(function() {
       user = 'Prinkle';
