@@ -43,6 +43,14 @@ function createPerson(firstName, lastName, age) {
     return p;
 }
 
+// var event = new Event('build');
+
+// // Listen for the event.
+// document.addEventListener('build', function (e) { debugger; }, false);
+
+// // Dispatch the event.
+// document.dispatchEvent(event);
+
 // if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 // module.exports = {
 //     sayHello, //equal to sayHello: sayHello

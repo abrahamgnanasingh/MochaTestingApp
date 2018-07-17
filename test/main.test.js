@@ -1,8 +1,10 @@
 if (typeof require !== 'undefined') {
-  var expect = require('chai').expect;
-  var assert = require('chai').assert;
+  var chai = require('chai');
+
+  var expect = chai.expect;
+  var assert = chai.assert;
   // var assert = require('assert');
-  var should = require('chai').should();
+  var should = chai.should();
   // var main = require ('../main');
   var rewire = require('rewire');
   var main = rewire('../main');
@@ -22,9 +24,9 @@ describe('#initial tests', function() {
   it('should validate user object', function() {
     expect('Baahubali' === '2.o').to.be.false;
     expect(user.name).to.equal('Aaron');
-    assert.isDefined(user);
 
     // assert.equal([1,2,3].indexOf(4), -1);
+    assert.isDefined(user);
     assert.isObject(user);
     assert.isString(user.name);
     assert.typeOf(user.age, 'number');
