@@ -85,8 +85,8 @@ describe('#hooks', function() {
 });
 
 describe('#asynchronous testing', function() {
-  this.retries(2);
-  this.timeout(10000); //default timeout is 2000 ms
+  this.retries(1);
+  this.timeout(30000); //default timeout is 2000 ms
 
   it('should test callbacks', function(done) {
     fetchTripDetails(function(result) {
@@ -105,6 +105,8 @@ describe('#asynchronous testing', function() {
       expect(result.time).to.be.a('string');
       expect(result.milliseconds_since_epoch).to.be.a('number');
       expect(result.date).to.be.a('string');
+      done();
+    }, function(error) {
       done();
     });
   });
